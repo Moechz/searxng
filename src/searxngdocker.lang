@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "searxngdocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[zh-cn]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG 是一款注重隐私的元搜索引擎：一次查询会同时检索数十个搜索服务并汇总结果，不给你画像，也不会把记录留在第三方账号里。在 NAS 上跑一份，任何浏览器都能用，其他应用还能调用它的 JSON API。每次安装都会在应用数据目录里生成独立的会话密钥。"
+release_note = "1. 首个版本：基于 Docker Hub 的 SearXNG 2026.11.8，以非 root 容器运行。隐私元搜索，每次安装独立密钥，提供 JSON API，配置持久化在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。首次启动会写入 DockerAppData/searxngdocker/config/settings.yml，内含随机密钥并开启图片代理；要改实例名或搜索引擎就编辑这个文件。本包默认关闭了请求限流，方便家里多台设备同时搜索；把实例公开到公网前请重新开启。界面为纯 HTTP，外网访问请配置带 TLS 的反向代理。卸载并删除数据前请先备份 config 目录。"
+
+[zh-hk]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG 是一款注重隱私的元搜尋引擎：一次查詢會同時檢索數十個搜尋服務並彙總結果，不給你畫像，也不會把紀錄留在第三方帳號裡。在 NAS 上跑一份，任何瀏覽器都能用，其他應用還能呼叫它的 JSON API。每次安裝都會在應用資料目錄裡產生獨立的會話密鑰。"
+release_note = "1. 首個版本：基於 Docker Hub 的 SearXNG 2026.11.8，以非 root 容器運行。隱私元搜尋，每次安裝獨立密鑰，提供 JSON API，設定持久化在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。首次啟動會寫入 DockerAppData/searxngdocker/config/settings.yml，內含隨機密鑰並開啟圖片代理；要改實例名稱或搜尋引擎就編輯這個檔案。本包預設關閉了請求限流，方便家裡多台裝置同時搜尋；把實例公開到互聯網前請重新開啟。介面為純 HTTP，外網存取請配置帶 TLS 的反向代理。解除安裝並刪除資料前請先備份 config 目錄。"
+
+[fr-fr]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[de-de]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[it-it]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[es-es]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[hu-hu]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[ja-jp]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[ko-kr]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[pl-pl]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[ru-ru]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[tr-tr]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[pt-pt]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[ar-sa]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[cs-cz]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[he-il]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[id-id]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[nb-no]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[nl-nl]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[sv-se]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[th-th]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+
+[vi-vn]
+name         = "SearXNG"
+auth         = "searxng"
+version      = "@@VERSION@@"
+descript     = "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start."
+release_note = "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal."
+

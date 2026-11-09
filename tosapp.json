@@ -1,0 +1,108 @@
+{
+  "app_id": "searxngdocker",
+  "title": "SearXNG",
+  "image": "searxng/searxng:2026.11.8-74418092d",
+  "repo_name": "searxng",
+  "mode": "plain",
+  "container_port": 8080,
+  "category": [
+    "Utilities"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/searxngdocker/config",
+      "container": "/etc/searxng"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai",
+    "SEARXNG_LIMITER": "false"
+  },
+  "auth": "searxng",
+  "upstream_url": "https://github.com/searxng/searxng",
+  "upstream_license": "AGPL-3.0",
+  "descript": "SearXNG is a privacy-respecting metasearch engine: it queries dozens of search services and aggregates the results without profiling you, and nothing is kept on a third-party account. Run it once on your NAS and search from any browser; other apps can use its JSON API. Each install generates its own session secret in the application data folder on first start.",
+  "release_note": "1. First release: SearXNG 2026.11.8 from Docker Hub as a non-root container. Private metasearch with a per-install secret, JSON API available, config persisted in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). The first start writes DockerAppData/searxngdocker/config/settings.yml with a unique secret and image proxy enabled - edit that file to rename the instance or change engines. The request limiter is disabled here so a family can search from several devices; turn it back on before exposing the instance publicly. Plain HTTP; use a TLS reverse proxy for internet access. Back up the config folder before uninstalling with data removal.",
+  "probe": {
+    "user_in_image": "(root)",
+    "entrypoint": [
+      "/usr/local/searxng/entrypoint.sh"
+    ],
+    "cmd": null,
+    "exposed_ports": [
+      8080
+    ],
+    "declared_volumes": [
+      "/etc/searxng",
+      "/var/cache/searxng"
+    ],
+    "image_healthcheck": [],
+    "digest": "searxng/searxng@sha256:7add5ffe7933e6b46aa3a26bed8a0c342c9a45ec331d9a8cf145e46b04b24f36",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "wget",
+    "trial_run": {
+      "ok": true,
+      "http_code": "200",
+      "state": "running",
+      "paths": [],
+      "host_port": 18000,
+      "log_tail": "SearXNG 2026.11.8-74418092d\n!!!\n!!! WARNING\n!!! \"/etc/searxng\" directory is not owned by \"searxng:searxng\"\n!!! This may cause issues when running SearXNG\n!!!\n!!! Expected \"searxng:searxng\"\n!!! Got \"root:root\"\n!!!\n!!!\n!!! WARNING\n!!! \"/var/cache/searxng\" directory is not owned by \"searxng:searxng\"\n!!! This may cause issues when running SearXNG\n!!!\n!!! Expected \"searxng:searxng\"\n!!! Got \"root:root\"\n!!!\n...\n... INFORMATION\n... \"/etc/searxng/settings.yml\" does not exist, creating from template...\n...\n[INFO] Starting granian (main PID: 1)\n[INFO] Listening at: http://[::]:8080\n[INFO] Spawning worker-1 with PID: 23\n[INFO] Started worker-1\ncp: can't preserve ownership of '/etc/searxng/settings.yml': Operation not permitted\n2026-11-09 15:38:09,255 ERROR:searx.engines: (PID 23) ahmia: can't register engine (loading engine failed)\n2026-11-09 15:38:09,789 ERROR:searx.engines: (PID 23) torch: can't register engine (loading engine failed)\n2026-11-09 15:38:09,930 WARNING:searx.botdetection.config: missing config file: /etc/searxng/limiter.toml\n2026-11-09 15:38:10,979 ERROR:searx.botdetection: X-Forwarded-For nor X-Real-IP header is set!",
+      "files_in_mounts": "/tmp/tosdocker-trial-1794238684/etc_searxng/settings.yml"
+    },
+    "docker_hub": {},
+    "github": {
+      "owner": "searxng",
+      "repo": "searxng",
+      "description": "SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.",
+      "license": "AGPL-3.0",
+      "homepage": "https://docs.searxng.org"
+    }
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "wget -q -O /dev/null http://127.0.0.1:8080/ || exit 1"
+  ],
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "searxngdocker",
+  "github_repo": "searxng",
+  "upstream_version": "2026.11.8",
+  "release_tag_prefix": "v",
+  "version": "2026.11.8-1",
+  "help": "https://github.com/Moechz/searxng/issues",
+  "official": "https://github.com/searxng/searxng",
+  "license": "AGPL-3.0",
+  "docker_socket": false,
+  "group_add": [],
+  "healthcheck_start_period": "40s",
+  "translations": {
+    "zh-cn": {
+      "descript": "SearXNG 是一款注重隐私的元搜索引擎：一次查询会同时检索数十个搜索服务并汇总结果，不给你画像，也不会把记录留在第三方账号里。在 NAS 上跑一份，任何浏览器都能用，其他应用还能调用它的 JSON API。每次安装都会在应用数据目录里生成独立的会话密钥。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。首次启动会写入 DockerAppData/searxngdocker/config/settings.yml，内含随机密钥并开启图片代理；要改实例名或搜索引擎就编辑这个文件。本包默认关闭了请求限流，方便家里多台设备同时搜索；把实例公开到公网前请重新开启。界面为纯 HTTP，外网访问请配置带 TLS 的反向代理。卸载并删除数据前请先备份 config 目录。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 SearXNG 2026.11.8，以非 root 容器运行。隐私元搜索，每次安装独立密钥，提供 JSON API，配置持久化在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "SearXNG 是一款注重隱私的元搜尋引擎：一次查詢會同時檢索數十個搜尋服務並彙總結果，不給你畫像，也不會把紀錄留在第三方帳號裡。在 NAS 上跑一份，任何瀏覽器都能用，其他應用還能呼叫它的 JSON API。每次安裝都會在應用資料目錄裡產生獨立的會話密鑰。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。首次啟動會寫入 DockerAppData/searxngdocker/config/settings.yml，內含隨機密鑰並開啟圖片代理；要改實例名稱或搜尋引擎就編輯這個檔案。本包預設關閉了請求限流，方便家裡多台裝置同時搜尋；把實例公開到互聯網前請重新開啟。介面為純 HTTP，外網存取請配置帶 TLS 的反向代理。解除安裝並刪除資料前請先備份 config 目錄。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 SearXNG 2026.11.8，以非 root 容器運行。隱私元搜尋，每次安裝獨立密鑰，提供 JSON API，設定持久化在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/etc/searxng` (mounted from `DockerAppData/searxngdocker/config`) holds `settings.yml`: the instance name, the generated `secret_key`, the enabled engines and the limiter switch.",
+  "design_notes": [
+    "**Per-install secret.** The image generates `secret_key` into the mounted settings file on first start, so no secret is baked into the package.",
+    "**Limiter off for LAN use.** `SEARXNG_LIMITER=false` keeps a family from hitting 429s; re-enable it before any public exposure.",
+    "**No external services of its own.** SearXNG scrambles the request through the engines you enable; nothing is stored outside the container."
+  ],
+  "limitations": [
+    "- The web UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet.",
+    "- With the limiter disabled, a public instance would be easy to abuse - only do that behind auth.",
+    "- Some engines are blocked or rate-limited from certain networks (the log lists the ones that failed to register); editing `settings.yml` lets you drop them."
+  ],
+  "host_port": 8036
+}
